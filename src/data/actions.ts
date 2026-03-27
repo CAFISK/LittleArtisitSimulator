@@ -1,4 +1,4 @@
-import type { Action, GameState } from './types'
+import type { Action, ActionCategory, GameState } from '../types'
 
 // Helper: random integer in [min, max]
 function randInt(min: number, max: number): number {

@@ -1,14 +1,15 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
   // GitHub Pages deploys to https://<user>.github.io/<repo>/
-  // Set base to your repo name, or use './' for relative paths
+  // Set base to your repo name
   base: '/LittleArtisitSimulator/',
   plugins: [vue()],
   resolve: {
     alias: {
-      '@': '/src'
+      '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   }
 })
